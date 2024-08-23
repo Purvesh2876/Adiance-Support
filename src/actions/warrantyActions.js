@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'http://192.168.29.123:7073/adiance';
-// const baseURL = 'https://seahorse-app-2-3o2pf.ondigitalocean.app/api'; 
+// const baseURL = 'http://192.168.29.123:7073/adiance';
+const baseURL = 'https://seahorse-app-2-3o2pf.ondigitalocean.app/adiance'; 
 
 const instance = axios.create({
     baseURL: baseURL
