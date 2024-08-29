@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { getWarrantyDetails } from "../actions/warrantyActions";
 import { useNavigate } from "react-router-dom";
+import logo from "../AI3MP.jpg";
 
 
 const WarrantyPage = () => {
@@ -41,7 +42,8 @@ const WarrantyPage = () => {
       return;
     }
     const response = await getWarrantyDetails(serialNumber);
-    console.log('Form submitted successfully:', response.data.data);
+    // const rekha = await imageCount('A447481E-BF17-ED11-9128-D05099D384F8');
+    // console.log('Form submitted successfully:',rekha);
     setSearchResult(response.data.data);
     console.log(' searchResult:', searchResult);
     // If validation passes, proceed to the next step
@@ -172,7 +174,7 @@ const WarrantyPage = () => {
               <Box display="flex" alignItems="center" spacing={4} mb={6}>
                 <Image
                   boxSize="30%"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAUC6PPmIoIJqM9elPAtmImfhdbvqTgAjIRg&s"
+                  src={logo}
                   alt="Product"
                   mr={4}
                 />
